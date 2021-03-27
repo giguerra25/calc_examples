@@ -4,7 +4,7 @@ install: calc_ui-es.mo
 	grep -q "`cat calc.services`" /etc/services || cat calc.services >> /etc/services
 	install calc.xinetd /etc/xinetd.d/calc
 	ln -sf /usr/local/bin/calc_ui /usr/local/bin/ncalc_ui
-        install calc_ui-es.mo /usr/share/locale/es/LC_MESSAGES/calc_ui.mo
+	install calc_ui-es.mo /usr/share/locale/es/LC_MESSAGES/calc_ui.mo
 
 calc_ui.pot: calc_ui
 	xgettext -o calc_ui.pot -L Shell calc_ui
